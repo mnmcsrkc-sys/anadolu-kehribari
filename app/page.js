@@ -31,10 +31,10 @@ export default function Home() {
         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', gap: '40px', flexWrap: 'wrap' }}>
           
           <header style={{ flex: '1.2', minWidth: '300px' }}>
-            {/* MÜHÜR - BÜYÜK HARF UZANTISI VE TARAYICIYI ZORLAYAN SORGU EKLEDİM */}
             <div style={{ marginBottom: '30px' }}>
+                {/* En güvenli resim çağırma yöntemi */}
                 <img 
-                src="/muhur.PNG?v=1" 
+                src="/muhur.PNG" 
                 alt="Mühür" 
                 style={{ 
                     width: '100px', 
@@ -44,8 +44,7 @@ export default function Home() {
                     filter: 'sepia(0.8) contrast(1.2)',
                     border: '3px double #78350f',
                     padding: '4px',
-                    backgroundColor: '#78350f',
-                    display: 'block'
+                    backgroundColor: '#78350f'
                 }} 
                 />
             </div>
@@ -79,7 +78,7 @@ export default function Home() {
                 boxShadow: '12px 12px 0px #d4d4d8',
                 cursor: 'pointer',
                 transform: 'rotate(1.5deg)', 
-                transition: 'transform 0.3s ease',
+                transition: 'transform 0.3s ease'
               }}
             >
               <div style={{ borderBottom: '2px solid #1a1a1a', paddingBottom: '8px', marginBottom: '20px', display: 'flex', justifyContent: 'space-between', fontSize: '12px', fontWeight: 'bold' }}>
@@ -130,4 +129,17 @@ export default function Home() {
               <span style={{ fontSize: '13px', color: '#b45309', fontWeight: 'bold' }}>{acikMakale.tarih}</span>
               <h2 style={{ fontSize: '46px', marginTop: '10px', lineHeight: '1.1', fontWeight: '700' }}>{acikMakale.baslik}</h2>
               <div style={{ width: '80px', height: '5px', backgroundColor: '#78350f', margin: '35px 0' }}></div>
-              <p style={{ fontSize: '21px', lineHeight: '1.9', color: '#1a1a1a', whiteSpace: 'pre-line', textAlign: 'justify' }}></p>
+              <p style={{ fontSize: '21px', lineHeight: '1.9', color: '#1a1a1a', whiteSpace: 'pre-line', textAlign: 'justify' }}>
+                {acikMakale.icerik}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <footer style={{ textAlign: 'center', padding: '80px 0', opacity: 0.3, fontSize: '11px', letterSpacing: '4px' }}>
+        © 2026 ANADOLU KEHRİBARI
+      </footer>
+    </div>
+  );
+}
